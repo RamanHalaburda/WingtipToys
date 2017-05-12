@@ -204,9 +204,10 @@ public class NVPAPICaller
         myWriter.Close();
       }
     }
-    catch (Exception)
+    catch (Exception ex)
     {
-      // No logging for this tutorial.
+        // Log the exception.
+        WingtipToys.Logic.ExceptionUtility.LogException(ex, "HttpCall in PayPalFunction.cs");
     }
 
     //Retrieve the Response returned from the NVP API call to PayPal.

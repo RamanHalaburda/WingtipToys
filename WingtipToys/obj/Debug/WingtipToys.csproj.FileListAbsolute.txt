@@ -102,3 +102,4 @@ E:\study\PREPARE_TO_BYTEPROTECT\proj\WingtipToys\WingtipToys\bin\Microsoft.Owin.
 E:\study\PREPARE_TO_BYTEPROTECT\proj\WingtipToys\WingtipToys\obj\Debug\WingtipToys.csprojResolveAssemblyReference.cache
 E:\study\PREPARE_TO_BYTEPROTECT\proj\WingtipToys\WingtipToys\obj\Debug\WingtipToys.dll
 E:\study\PREPARE_TO_BYTEPROTECT\proj\WingtipToys\WingtipToys\obj\Debug\WingtipToys.pdb
+E:\study\PREPARE_TO_BYTEPROTECT\proj\WingtipToys\WingtipToys\bin\Elmah.dll

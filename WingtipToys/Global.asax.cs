@@ -42,5 +42,30 @@ namespace WingtipToys
                 "Product/{productName}",
                 "~/ProductDetails.aspx");
         }
+
+        void Application_Error(object sender, EventArgs e) // added 12.05.2017
+        {
+            // Code that runs when an unhandled error occurs.
+            Exception exc = Server.GetLastError();
+
+            if (exc is HttpUnhandledException)
+            {
+                // Pass the error on to the error page.
+                Server.Transfer("ErrorPage.aspx?handler=Application_Error%20-%20Global.asax", true);
+            }
+
+            // Get last error from the server
+            Exception ex = Server.GetLastError();
+
+            if (ex is HttpUnhandledException)
+            {
+                if (ex.InnerException != null)
+                {
+                    ex = new Exception(exc.InnerException.Message);
+                    Server.Transfer("ErrorPage.aspx?handler=Application_Error%20-%20Global.asax",
+                        true);
+                }
+            }
+        }
     }
 }
